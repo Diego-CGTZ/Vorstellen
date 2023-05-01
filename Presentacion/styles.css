@@ -1,3 +1,13 @@
+:root{
+    --blanco: #ffffff;
+    --negro: #000000;
+    --primario: rgb(51, 134, 118);
+    --secundario: #2b2b2b;
+    --terciario: #313131;
+
+}
+
+/* =============Reinicio de valores==================== */
 *{
     margin: 0;
     padding: 0;
@@ -6,54 +16,69 @@
     vertical-align: baseline;
 }
 
-body{
-
-    text-align: center;
-    font-family: Helvetica;
+html{
+    font-size: 62.5%;
 }
+
+body{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* ============================================================= */
 
 .head {
-    display: flex;  /*acomodo de los elementos*/
-    align-items: center; /*alineacion de los iconos*/
-    justify-content: space-between; /*espacio entre el contenido*/
-    height: 10%;
-    background-color: #2b2b2b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8rem;
+    background-color: var(--secundario);
     position: fixed;
     width: 100%;
-    z-index: 100; /* posicion dentro de la pagina(adelante/atras)*/
+    z-index: 100;
+    margin-bottom: 2rem; /* posicion dentro de la pagina(adelante/atras)*/
 }
-.navbar {
-    display: flex;
-    margin-right: 10%;
-}
+
 .logo{
-    margin-top: .5%;
-    margin-left: .5%;
+    margin-left: 1rem;
+    justify-content: center;
+    display: flex;
 }
 
 .logo img{
-    height: 60px;
+    height: 6rem;
 }
 
 .logo a {
     text-decoration: none;
-    color: #fff;
+    color: var(--blanco);
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 2rem;
 }
+
+.navbar {
+    display: flex;
+}
+
+
+@media (max-width: 900px) {
+    .navbar{
+        display: inline;
+    }
+}
+
 
 .navbar a {
     display: block;
-    padding: 23px 20px;
-    color: #fff;
+    padding: 2.3rem 2rem;
+    color: var(--blanco);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 2rem;
     justify-content: center;
 }
 
 .navbar a:hover {
-    background-color: rgb(46, 113, 98);
+    background-color: var(--primario);
 }
 
 .header {
@@ -63,9 +88,10 @@ body{
 }
 
 .header {
-    height: 60vh !important;
+    padding-top: 5rem ;
     background: url(imagenes/hilos.jpg) no-repeat center;
     background-size: cover;
+    justify-content: center;
 }
 
 .header .logo{
@@ -74,7 +100,7 @@ body{
 }
 
 .header .title {
-    background:rgb(46, 113, 98);
+    background: var(--primario);
     width: 100%;
     opacity: .9;
 }
@@ -91,7 +117,7 @@ body{
 .header p {
     font-size: 30px;
     font-family: 'Times New Roman';
-    text-shadow: 5px 5px 5px black;
+    text-shadow: 5px 5px 5px var(--negro);
 }
 
 .header .btn {
@@ -102,24 +128,25 @@ body{
     font-size: 40px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--blanco);
+    text-align: center;
 }
 
 p{
     margin-top: 20px;
     margin-bottom: 40px;
     font-size: 18px;
-    color: #fff;
+    color: var(--blanco);
 }
 
 .btn {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    border: 2px solid rgb(46, 113, 98);
-    color: white;
+    border: 2px solid var(--primario);
+    color: var(--blanco);
     text-decoration: none;
-    background-color: rgb(46, 113, 98);
+    background-color: var(--primario);
     border-radius: 10%;
     box-shadow: 5px 5px 5px black;
 }
@@ -252,21 +279,3 @@ p{
     background: #1f1d1d;
 }
 
-@media(max-width: 768px) {
-    .title {
-        margin-bottom: 0;
-        font-size: 40px;
-    }
-
-    .sau {
-        height: 120vh;
-    }
-
-    .navbar {
-        display: none;
-    }
-
-    .logo{
-
-    }
-}
