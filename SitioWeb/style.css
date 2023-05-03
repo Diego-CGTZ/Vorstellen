@@ -39,6 +39,11 @@ body{
         padding: 0 30rem;
     }
     
+    .navbar img{
+        height: 4rem;
+        padding: 1rem;
+    }
+    
     .navbar a{
         display: block;
         padding: 2rem 2rem;
@@ -83,35 +88,54 @@ body{
 
     .navbar-telefono ul li{
         display: none;
+        background-color: var(--secundario);
+    }
+    
+    .navbar-telefono ul li a{
+        color: var(--blanco);
+
     }
 
     .navbar-telefono:hover ul li{
         display: block;
+        padding-left:5rem;
+        font-size: 2rem;
+        background-color: var(--terciario);
     }
 
 }
 
 .presentacion{
-    display: block;
+    background: url(img/hilos.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
     justify-content: center;
-    align-items: center;
 }
 
-.presentacion{
-    background: url(img/hilos.jpg) no-repeat center;
-    background-size: cover;
-    justify-content: center;
+#texto-superior{
+    color:var(--blanco);
+    font-size: 2.5rem;
+    padding: 2rem 2rem;
+    text-shadow: 4px 4px 5px var(--negro);
+}
+
+.presentacion .logo{
+    height: 15rem;
+    padding: 0 2rem 2rem 2rem;
 }
 
 .presentacion .titulo{
-    text-transform: uppercase;
+    margin-bottom: 2rem;
     color: var(--blanco);
     font-size: 6rem;
-    justify-content: center;
     background-color: var(--primario);
     opacity: .9;
+    text-shadow: 2px 2px 3px var(--negro);
 }
 
-.presentacion img{
-    height: 10rem;
+.presentacion #texto-inferior{
+    color: var(--blanco);
+    text-shadow: 4px 4px 5px var(--negro);
+    font-size: 2.5rem;
 }
