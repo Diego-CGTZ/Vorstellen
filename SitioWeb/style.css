@@ -27,52 +27,55 @@ body{
 h2{
     font-size: 5vh;
     text-align: center;
+    
+}
+
+.hidden{
+    display: none;
 }
 /* ==========Formato de la pagina================== */
 
-/* ==================Ajuste para pantalla de computadora============== */
+/*Ajuste para cualquier pantalla*/
 @media (min-width: 750px) {
     .navbar-telefono{
         display: none;
     }
-
-    .navbar {
-        position: fixed;
-        background-color: var(--secundario);
-        height: 6rem;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        
-        justify-content: space-between;
-        padding: 0 0;
-        z-index: 100;  
-    }
-    
-    .navbar img{
-        height: 4rem;
-        padding: 1rem;
-    }
-    
-    .navbar a{
-        display: block;
-        padding: 2rem 2rem;
-        color: var(--blanco);
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 1.2em;
-        justify-content: center;
-    }
-    
     .navbar a:hover{
         display: block;
         background-color: var(--primario);
         color:var(--negro);
         height: 3rem;
     }
+    
+}
+.navbar {
+    position: fixed;
+    background-color: var(--secundario);
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+    z-index: 100;  
 }
 
-/* ==================Ajuste para tamanio de tableta============ */
+.navbar img{
+    height: 4rem;
+    padding: 1rem;
+}
+
+.navbar a{
+    display: block;
+    padding: 2rem 2rem;
+    color: var(--blanco);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    justify-content: center;
+}
+
+/*Ajuste para tamanio de telefono*/
 @media (max-width: 750px) {
     .menu{
         display: block;
@@ -89,16 +92,28 @@ h2{
 
     .menu i{
         color: var(--blanco);
-        float: right;
+        float: left;
+        padding-right: 1rem;
     }
 
     .navbar{
         display: none;
     }
 
+    .navbar-telefono{
+        position: absolute;
+        width: 100%;
+    }
+
     .navbar-telefono ul li{
-        display: none;
-        background-color: var(--secundario);
+        display: block;
+        padding: 1rem 5rem;
+        background-color: var(--terciario);
+        width: 20rem;
+    }
+
+    .navbar-telefono ul li:hover{
+        background-color: var(--primario);
     }
     
     .navbar-telefono ul li a{
@@ -106,14 +121,9 @@ h2{
 
     }
 
-    .navbar-telefono:hover ul li{
-        display: block;
-        padding-left:5rem;
-        font-size: 2rem;
-        background-color: var(--terciario);
-    }
-
 }
+
+/* presentacion */
 .presentacion{
     padding-top: 5rem;
     background: linear-gradient(rgba(0,0,0,.5)0%, rgba(0,0,0,.5)100%), url(img/calavera.jpg) no-repeat;
@@ -145,79 +155,13 @@ h2{
 
 
 
-/* ===================Redes sociales======================== */
+/*Redes sociales*/
 
 .redes{
-    padding: 3rem;
-    background: var(--terciario);
+    background-color: var(--secundario);
+    color:var(--blanco);
 }
 
-.redes .titulo-redes{
-    padding: 2rem;
-    color: var(--blanco)
-}
-.box-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    text-align: center;
-    align-items: center;
-    padding: 2rem 15rem;
-}
-
-.redes .telefono{
-    display: none;
-}
-
-/* ======================tamanio telefono===================== */
-@media (max-width: 800px) {
-    .redes .mediano-grande{
-        display: none;
-    }
-    
-    .redes .telefono{
-        display: block;
-        text-align: center;
-    }
-    
-    .redes .telefono .logos-redes{
-        color:var(--primario);
-        background-color: var(--negro);
-        font-size: 2em;
-        padding: .5em;
-        margin: .5em;
-        border-radius: 20%;
-    }
-}
-.box{
-    padding: 1rem;
-    margin: 1rem;
-    width: 15rem;
-    height: 15rem;
-    border-radius: 20%;
-    background-color: var(--negro);
-    color: var(--blanco);
-    box-shadow: 1px 4px 8px var(--negro);
-}
-
-.box .logos-redes{
-    padding: 1rem;
-    font-size: 5rem;
-    color: var(--primario);
-    text-align: center;
-}
-
-.box .logos-redes:hover{
-    animation:jello-horizontal .9s linear both
-}
-
-.box #gmail{
-    font-size: 1rem;
-}
-
-.redes p{
-    padding-top: 1rem;
-}
 /* ==================================productos==================================== */
 
 .productos{
@@ -252,10 +196,6 @@ height: 200px;
 }
 /* =================================Ubicacion================================== */
 .ubicacion .ubi iframe{
-    width: 100%;
-}
-.ubicacion h2{
-    text-align: center;
     width: 100%;
 }
 
