@@ -1,0 +1,218 @@
+:root {
+    --blanco: rgb(255, 255, 255);
+    --negro: rgb(0, 0, 0);
+    --principal: rgb(59, 132, 116);
+    --secundario: rgb(74, 74, 74);
+    --gris: rgb(216, 216, 216);
+    --fuentePrincipal: 'Spline Sans Mono', monospace;
+    --fondoTransparente: rgba(0, 0, 0, .6);
+}
+
+/* Globales */
+
+html {
+    font-size: 62.5%;
+    /* Hack para box Model*/
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--gris);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    justify-content: center;
+    align-items: center;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+/* utilidades */
+.w-100 {
+    width: 100%;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+/* tipografia */
+.enlace{
+    color: var(--blanco);
+    margin: 0 1rem;
+    text-align: center;
+    padding: 3rem;
+    height: 10rem;
+}
+
+.titulo {
+    font-size: 2.3rem;
+    font-weight: bold;
+    font-family: var(--fuentePrincipal);
+    padding: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--negro);
+}
+
+p {font-family: var(--gris);}
+
+a {text-decoration: none;}
+
+.divisor {
+    border:2px solid var(--principal);
+    width: 80%;
+    color: var(--principal);
+    margin: 0 auto;
+}
+
+/* navegacion */
+
+
+.navbar{
+    height: 7rem    ;
+    width: 100%;
+    position:fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--fondoTransparente);
+}
+
+.navbar__empresa{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.navbar__empresa__logo{
+    max-height: 5rem;
+    margin-right: .5rem;
+    font-family: var(--fuentePrincipal);
+}
+
+.navbar .titulo{
+    color: var(--blanco);
+}
+
+.navbar a:hover{
+    text-decoration: none;
+    color: var(--principal);
+}
+
+@media (max-width: 930px) {
+    .navbar__enlaces{
+        display: none;
+    }
+}
+
+.navegacion{
+    background: linear-gradient(rgba(0,0,0,.5)0%, rgba(0,0,0,.5)100%), url(../img/calavera.jpg) no-repeat center;
+    background-size: cover;
+    height: 40vh;
+}
+
+@media (min-width: 720px) {
+    .navegacion{
+        height: 90vh;
+
+    }
+}
+
+/* redes sociales */
+
+.contenedor{
+    margin-top: 3rem;
+    background-color: var(--blanco);
+    width: 85%;
+    border-radius: .8rem;
+    box-shadow: 8px 8px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.enlaces{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+}
+
+.social_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social_box i{
+    padding: 2rem;
+    color: var(--negro);
+    font-size: 6vw;
+}
+
+/* servicios */
+
+.servicios{
+
+    justify-content: center;
+    align-items: center;
+}
+
+.menus__servicios{
+    padding: 2rem;
+    height: 70vh;
+    display: flex;
+    justify-content:center;
+}
+
+.menu{
+    margin: 2rem;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border-radius: 2rem;
+}
+
+.bordado{
+    background: linear-gradient(rgba(0,0,0,.5)0%, rgba(0,0,0,.5)100%), url(../img/calavera.jpg) no-repeat;
+    background-size: cover;
+}
+
+.vinil{
+    background: linear-gradient(rgba(0,0,0,.5)0%, rgba(0,0,0,.5)100%), url(../img/mar.png) no-repeat;
+    background-size: cover;
+}
+
+.boton__servicios{
+    padding: 2rem;
+    margin: 1rem;
+    width: 10rem;
+    background: rgba(0, 0, 0, .6);
+    color: var(--blanco);
+    border-radius: 2rem;
+}
+
+.subtitulo{
+    color: var(--blanco);
+}
+
+/* footer */
+
+.footer{
+    margin-top: 4rem;
+    padding: 1rem;
+    background-color: var(--secundario);
+    color: var(--blanco);
+    height: 20rem;
+}
